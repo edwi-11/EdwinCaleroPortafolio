@@ -1,0 +1,17 @@
+# Este workflow muestra un mensaje
+name: Hola Mundo
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Mostrar mensaje
+        run: echo "Hola Mundo"
